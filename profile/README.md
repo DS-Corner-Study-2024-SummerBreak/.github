@@ -13,9 +13,9 @@
 깃허브와 초면인 분을 위해! 조직의 레포를 연결하는 과정부터 차근차근 설명드립니다!
 1. Github 회원가입과 Git 설치가 선행되어야 합니다.
 2. 스터디를 진행할 폴더를 자신의 컴퓨터에서 생성합니다.
-3. 이 조직에서 각자의 **닉네임**으로 생성된 레포지토리를 자신의 컴퓨터에 Fork  합니다.
-4. 이 조직 내에 있는 자신의 레포지토리 주소를 1의 과정에서 생성한 로컬 폴더에 연결합니다.
-5. 2의 과정으로 생성된 자신의 깃허브에 FORK된 레포지토리의 주소를 위와 같은 로컬 폴더에 연결합니다.
+3. 이 조직에서 각자의 **닉네임**으로 생성된 레포지토리를 자신의 저장소에 Fork합니다.
+4. 이 조직 내에 있는 자신의 레포지토리 주소를 2의 과정에서 생성한 로컬 폴더에 연결합니다.
+5. 3의 과정으로 생성된 자신의 깃허브에 FORK된 레포지토리의 주소를 위와 같은 로컬 폴더에 연결합니다.
 </br> </br>
 
 그래도 아직 잘 모르겠다면, 아래의 로컬 폴더 연결 순서를 참고해주세요.
@@ -25,15 +25,16 @@
 3. 터미널 실행 > git bash 실행하기 >> 이하 작업은 터미널에서 작성하는 명령어입니다.
 4. 터미널에서 나의 현재 위치가 1에서 만든 로컬 폴더 위치인지 확인하기.
 아니라면 파일 위치 이동하기 ! (window는 cd 명령어를 이용해주세요)
-5. ``` git init ```
+5. ```git config --global init.defaultBranch main``` << 기본 브랜치를 master에서 main으로 변경
+6. ``` git init ```
 << 현재 연결된 레포 주소 삭제 및 초기화
-6. ``` git remote add origin  본인레포주소 ``` 
+7. ``` git remote add origin  본인레포주소 ``` 
 << origin 이라는 이름으로 본인 레포 주소를 넣습니다.
-7. ``` git remote add upstream 조직레포주소 ``` 
+8. ``` git remote add upstream 조직레포주소 ``` 
 << upstream 이라는 이름으로 조직 레포 주소를 넣습니다.
-8. ``` git remote -v ```
+9. ``` git remote -v ```
 << 현재 폴더와 연결된 레포 주소를 모두 확인할 수 있습니다. </br>
-origin 이라는 이름과 본인레포주소가 맞는지,  upstream 이름과 조직 레포 주소가 맞는지 확인해주세요
+origin 이라는 이름과 본인레포주소가 맞는지, upstream 이름과 조직 레포 주소가 맞는지, 브랜치 이름이 (main)인지 확인해주세요.
 </br> </br> </br> </br>
 
 
@@ -44,10 +45,21 @@ origin 이라는 이름과 본인레포주소가 맞는지,  upstream 이름과 
 
 1. 되도록 github 웹사이트 내에서 바로 정리하는 것이 아닌, 실제 로컬에서 진행한 후 명령어를 통해서 깃허브에 올려 주세요.
 2. 각 주차별 폴더를 생성하고, 챌린지 및 스터디 내용을 해당 폴더 안에 작성해 주세요.
-3. 작성을 끝마쳤다면 명령어를 통해서 작성한 내용을 깃허브에 푸시하고, 풀 리퀘를 진행해주세요.</br></br>
+3. 작성을 끝마쳤다면 ```git add .``` << 수정 사항 add
+4. ```git commit -m "메모 사항"``` << 수정 사항 commit
+5.```git push origin main``` << 포크한 내 저장소로 push
+6. 깃허브에서 내 저장소로 이동해 추가된 파일을 확인합니다.
+</br></br> **Pull request 생성 및 Merge**
+1. 내 저장소 - Pull request - New pull request(초록색 버튼) 클릭
+2. 저장소와 브랜치 명 확인 (조직의 내 저장소 <- 내 저장소)
+3. create pull request(초록색 버튼) 클릭
+4. 조직 저장소의 내 닉네임의 레포 - Pull request - Merge pull request(초록색 버튼) - confirm merge(초록색 버튼) 클릭
+5. 보라색의 Merged 뱃지가 보인다면 성공!
+   
+   </br></br></br></br>
 
 ### 🙃 그래도 아직 잘 모르겠다면, 
-[cocobird의 레포지토리](https://github.com/DS-Corner-Study/COCOBIRD/tree/main)를 구경하고 참고해주세요.
+[cocobird의 레포지토리](https://github.com/DS-Corner-Study/COCOBIRD/tree/main)와 [dongdong의 레포지토리](https://github.com/DS-Corner-Study-2024-SummerBreak/dongdong)를 구경하고 참고해주세요.
 
 </br> </br> </br> </br>
 
@@ -60,3 +72,4 @@ origin 이라는 이름과 본인레포주소가 맞는지,  upstream 이름과 
 
 
 🧡 W. _**CORNER**_ - [김지민](https://github.com/jimin-ni)
+🧡 20240704_수정. _**CORNER**_ - [박유정](https://github.com/qkrdbwjd)
